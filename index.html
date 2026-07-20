@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordi Lesther | Portafolio</title>
+    <!-- Inyectamos Tailwind CSS vía CDN para prototipado rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter de Google Fonts para un look limpio y tecnológico -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-white font-bold text-xl tracking-tight">Jordi<span class="text-blue-500">Lesther</span></span>
+            <div class="space-x-6 text-sm font-medium">
+                <a href="#proyectos" class="hover:text-white transition">Casos de Estudio</a>
+                <a href="#contacto" class="hover:text-white transition">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO (INICIO) -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+            
+            <!-- Texto Izquierda -->
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-3">Hola, soy Jordi 👋</h2>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+                    Full Stack Dev <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                        AI & E-commerce Architect
+                    </span>
+                </h1>
+                <p class="text-lg text-slate-400 mb-8 max-w-xl mx-auto md:mx-0">
+                    Construyo el puente entre ecosistemas web de alto rendimiento y soluciones de negocio automatizadas. Transformo requerimientos complejos en arquitecturas escalables.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#proyectos" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg font-medium transition text-center">
+                        Ver mi trabajo
+                    </a>
+                    <a href="https://github.com/tu-usuario" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-3 rounded-lg font-medium transition text-center flex justify-center items-center gap-2">
+                        <!-- Icono SVG simple de GitHub -->
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Placeholder de Foto Derecha -->
+            <div class="flex-1 flex justify-center md:justify-end">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-800 border-4 border-slate-700 overflow-hidden flex flex-col items-center justify-center text-slate-500 shadow-2xl">
+                    <svg class="w-12 h-12 mb-2 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span class="text-sm">Tu Foto Aquí</span>
+                    <span class="text-xs text-slate-600">(Ideal: 400x400 px)</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROYECTOS / CASOS DE ESTUDIO -->
+    <section id="proyectos" class="py-24 px-6 bg-slate-800/30 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-2 text-center">Casos de Estudio & Arquitectura</h2>
+            <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">Explora mis repositorios destacados donde documento patrones de código, orquestación de IA y soluciones reales.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700 text-slate-500 text-sm flex-col">
+                        <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        [ Captura de tu diagrama o JSON ]
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-blue-900/50 text-blue-400 text-xs px-2 py-1 rounded font-medium">Prompt Engineering</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Agentes Cognitivos & RAG</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Patrones de ingeniería de prompts y guardrails para orquestar agentes de soporte y cualificación de leads en producción.</p>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">Ver Repositorio &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden hover:border-emerald-500 transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700 text-slate-500 text-sm flex-col">
+                        <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                        [ Captura de tu flujo en n8n ]
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-emerald-900/50 text-emerald-400 text-xs px-2 py-1 rounded font-medium">n8n</span>
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded font-medium">Automatización</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">HITL Architecture</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Arquitectura "Human-in-the-Loop" y flujos visuales para transiciones fluidas entre inteligencia artificial y operadores humanos.</p>
+                        <a href="#" class="text-emerald-400 hover:text-emerald-300 text-sm font-medium flex items-center gap-1">Ver Repositorio &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-slate-900 rounded-xl border border-slate-700 overflow-hidden hover:border-purple-500 transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700 text-slate-500 text-sm flex-col">
+                        <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        [ Captura de un Snippet de Código ]
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex gap-2 mb-3">
+                            <span class="bg-purple-900/50 text-purple-400 text-xs px-2 py-1 rounded font-medium">Next.js / Node.js</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Core Snippets</h3>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">Colección de patrones reutilizables, hooks personalizados y soluciones arquitectónicas para tiendas online de alto rendimiento.</p>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center gap-1">Ver Repositorio &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FOOTER / CONTACTO -->
+    <footer id="contacto" class="py-16 px-6 bg-slate-900 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold text-white mb-4">¿Listo para escalar tu arquitectura?</h2>
+            <p class="text-slate-400 mb-8">Estoy abierto a nuevas oportunidades y proyectos interesantes.</p>
+            <a href="mailto:tu-correo@gmail.com" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg shadow-blue-500/30">
+                Ponerse en contacto
+            </a>
+            <div class="mt-12 text-slate-500 text-sm border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Jordi Lesther. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition">LinkedIn</a>
+                    <a href="#" class="hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
