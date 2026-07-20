@@ -3,142 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordi Lesther | Full Stack & AI</title>
-    <!-- Tailwind CSS -->
+    <title>Jordi Lesther | Bento Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fuentes: Inter para texto general, Fira Code para detalles técnicos -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Ocultar scrollbar para cajas scrolleables si es necesario */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body class="bg-neutral-950 text-neutral-300 antialiased selection:bg-fuchsia-500 selection:text-white">
+<body class="bg-[#0a0a0a] text-slate-300 antialiased min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12 selection:bg-fuchsia-500 selection:text-white">
 
-    <!-- CONTENEDOR PRINCIPAL: Diseño Dividido (Split Layout) -->
-    <div class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 md:gap-20">
+    <!-- BENTO GRID CONTAINER -->
+    <main class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-auto">
 
-        <!-- COLUMNA IZQUIERDA (Fija en Desktop) -->
-        <aside class="md:w-1/3 md:sticky md:top-20 h-fit flex flex-col gap-8">
-            
-            <!-- Encabezado Perfil -->
+        <!-- CAJA 1: Perfil Principal (Ocupa 2 columnas y 2 filas en Desktop) -->
+        <div class="md:col-span-2 md:row-span-2 bg-[#121212] border border-[#222] rounded-3xl p-8 flex flex-col justify-between hover:border-[#333] transition-colors">
             <div>
-                <div class="w-32 h-32 rounded-2xl overflow-hidden mb-6 ring-2 ring-neutral-800">
-                    <img src="https://github.com/JordiLestherdev.png" alt="Jordi Lesther Contreras" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                <div class="flex items-center justify-between mb-8">
+                    <img src="https://github.com/JordiLestherdev.png" alt="Jordi Lesther" class="w-20 h-20 rounded-full border-2 border-[#333]">
+                    <div class="flex gap-2">
+                        <a href="https://github.com/JordiLestherdev" class="p-2 bg-[#1a1a1a] rounded-full hover:bg-[#222] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a>
+                        <a href="https://www.linkedin.com/in/jordilestherdev" class="p-2 bg-[#1a1a1a] rounded-full hover:bg-[#222] transition"><svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    </div>
                 </div>
-                <h1 class="text-4xl font-bold text-white tracking-tight mb-2">Jordi Lesther</h1>
-                <h2 class="text-lg font-mono text-fuchsia-400 mb-4">Full Stack & AI Architect</h2>
-                <p class="text-neutral-400 text-sm leading-relaxed">
-                    Especialista en arquitecturas web modernas, ecosistemas e-commerce (VTEX IO / Next.js) y sistemas automatizados <i>Human-in-the-Loop</i> (n8n).
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">Jordi Lesther</h1>
+                <h2 class="text-fuchsia-400 font-medium mb-6">AI & E-commerce Architect</h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    Soy un desarrollador que entiende que el código es una herramienta para resolver problemas de negocio. Mi enfoque combina +4 años en arquitecturas modernas con un agudo <b>Business Acumen</b> logístico. Traduzco cuellos de botella operativos en sistemas altamente eficientes.
                 </p>
             </div>
-
-            <!-- Botonera de Contacto y Redes -->
-            <div class="flex flex-col gap-3">
-                <!-- GitHub -->
-                <a href="https://github.com/JordiLestherdev" target="_blank" class="flex items-center gap-3 px-4 py-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-sm text-neutral-300 hover:text-white transition group">
-                    <svg class="w-5 h-5 text-neutral-500 group-hover:text-white transition" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                    JordiLestherdev
-                </a>
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/jordilestherdev" target="_blank" class="flex items-center gap-3 px-4 py-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-sm text-neutral-300 hover:text-white transition group">
-                    <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    LinkedIn
-                </a>
-                <!-- GetOnBoard -->
-                <a href="https://www.getonbrd.com/p/jordi-lesther-contreras" target="_blank" class="flex items-center gap-3 px-4 py-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-sm text-neutral-300 hover:text-white transition group">
-                    <span class="w-5 h-5 flex items-center justify-center font-bold text-emerald-400">G</span>
-                    GetOnBoard
-                </a>
-                <!-- WhatsApp -->
-                <a href="https://wa.me/56946976778" target="_blank" class="flex items-center gap-3 px-4 py-3 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-sm text-neutral-300 hover:text-white transition group">
-                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    +56 9 4697 6778
-                </a>
-                <!-- Email -->
-                <a href="mailto:jordi.lf.cb@gmail.com" class="flex items-center gap-3 px-4 py-3 bg-fuchsia-600/10 hover:bg-fuchsia-600/20 border border-fuchsia-500/30 rounded-lg text-sm text-fuchsia-300 transition group mt-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    jordi.lf.cb@gmail.com
-                </a>
+            <div class="mt-8 pt-6 border-t border-[#222] flex flex-wrap gap-4 text-sm font-medium">
+                <a href="mailto:jordi.lf.cb@gmail.com" class="text-slate-300 hover:text-white transition">jordi.lf.cb@gmail.com</a>
+                <span class="text-[#333]">|</span>
+                <a href="https://wa.me/56946976778" class="text-slate-300 hover:text-white transition">+56 9 4697 6778</a>
             </div>
-        </aside>
+        </div>
 
-        <!-- COLUMNA DERECHA (Contenido Scrolleable) -->
-        <main class="md:w-2/3 flex flex-col gap-16">
-            
-            <!-- Sección Sobre Mí -->
-            <section>
-                <h3 class="text-xs font-mono text-fuchsia-400 uppercase tracking-widest mb-4">01. Sobre Mí</h3>
-                <div class="prose prose-invert prose-neutral max-w-none text-neutral-400">
-                    <p class="mb-4">
-                        Desarrollador enfocado en cerrar la brecha entre el código y los objetivos de negocio. Con más de 5 años de experiencia, mi especialidad radica en tiendas online de alto tráfico y arquitecturas distribuidas.
-                    </p>
-                    <p>
-                        Actualmente, mi pasión es la integración de Inteligencia Artificial en flujos de trabajo corporativos, diseñando agentes que reducen la fricción operativa sin perder el toque humano. Y cuando no estoy codeando, probablemente me encuentres practicando <b>cartomagia</b> 🔮, jugando juegos de mesa 🎲, rodando en <b>patines</b> 🛼 o atrapando un <b>Gengar</b> 👻.
-                    </p>
+        <!-- CAJA 2: Corebiz / VTEX (Destacado de rendimiento) -->
+        <div class="md:col-span-1 lg:col-span-2 bg-gradient-to-br from-[#1a1a2e] to-[#121212] border border-[#2a2a4a] rounded-3xl p-8 flex flex-col justify-center hover:border-[#3a3a6a] transition-colors relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-6 opacity-10 text-white">
+                <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <div class="relative z-10">
+                <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">Enterprise E-commerce</span>
+                <h3 class="text-2xl font-bold text-white mb-2">100% Uptime</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Lideré el Frontend de +10 tiendas en <b>Corebiz</b> bajo <b>VTEX IO</b>. Mis implementaciones de checkout soportaron altos volúmenes transaccionales durante Cyber Monday y Black Friday sin caídas.
+                </p>
+            </div>
+        </div>
+
+        <!-- CAJA 3: IA & n8n -->
+        <div class="md:col-span-1 lg:col-span-1 bg-[#121212] border border-[#222] rounded-3xl p-8 flex flex-col justify-center hover:border-emerald-500/30 transition-colors">
+            <span class="inline-block w-fit px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full mb-4">Automation</span>
+            <h3 class="text-lg font-bold text-white mb-2">HitL Architecture</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Diseño y despliegue de agentes conversacionales AI integrados vía <b>WhatsApp Cloud API</b> y <b>n8n</b> para la gestión de leads en tiempo real.
+            </p>
+        </div>
+
+        <!-- CAJA 4: Stack Tecnológico -->
+        <div class="md:col-span-2 lg:col-span-2 bg-[#121212] border border-[#222] rounded-3xl p-8 flex flex-col justify-center">
+            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">Core Stack</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-xl text-sm font-medium text-slate-300">Next.js</span>
+                <span class="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-xl text-sm font-medium text-slate-300">Node.js</span>
+                <span class="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-xl text-sm font-medium text-slate-300">VTEX IO</span>
+                <span class="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-xl text-sm font-medium text-slate-300">TypeScript</span>
+                <span class="px-4 py-2 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-xl text-sm font-medium text-fuchsia-300">n8n</span>
+                <span class="px-4 py-2 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-xl text-sm font-medium text-fuchsia-300">OpenAI / Gemini</span>
+                <span class="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-xl text-sm font-medium text-slate-300">WhatsApp API</span>
+            </div>
+        </div>
+
+        <!-- CAJA 5: Proyecto Destacado (El Repositorio) -->
+        <a href="https://github.com/JordiLestherdev" target="_blank" class="md:col-span-1 lg:col-span-2 bg-[#121212] border border-[#222] rounded-3xl p-8 flex flex-col justify-between group hover:border-fuchsia-500/50 hover:bg-[#151515] transition-all">
+            <div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-[#1a1a1a] border border-[#333] text-slate-300 text-xs font-medium rounded-full">
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                        Repositorio Central
+                    </span>
+                    <svg class="w-5 h-5 text-slate-500 group-hover:text-fuchsia-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                 </div>
-            </section>
+                <h3 class="text-xl font-bold text-white mb-2">ai-cognitive-agents-prompts</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                    Patrones de ingeniería de prompts, manejo de contexto y guardrails para agentes en producción. Incluye orquestación para cualificación de leads y soporte E-commerce (RAG).
+                </p>
+            </div>
+            <div class="flex gap-2">
+                <span class="text-xs text-fuchsia-400 font-mono">#LLMs</span>
+                <span class="text-xs text-fuchsia-400 font-mono">#Prompt-Engineering</span>
+            </div>
+        </a>
 
-            <!-- Sección Stack -->
-            <section>
-                <h3 class="text-xs font-mono text-fuchsia-400 uppercase tracking-widest mb-6">02. Arsenal Técnico</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-sm font-mono text-neutral-300">Next.js</span>
-                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-sm font-mono text-neutral-300">Node.js</span>
-                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-sm font-mono text-neutral-300">TypeScript</span>
-                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-sm font-mono text-neutral-300">VTEX IO</span>
-                    <span class="px-3 py-1 bg-fuchsia-900/30 border border-fuchsia-500/30 rounded-full text-sm font-mono text-fuchsia-300">n8n (Automatización)</span>
-                    <span class="px-3 py-1 bg-fuchsia-900/30 border border-fuchsia-500/30 rounded-full text-sm font-mono text-fuchsia-300">Prompt Engineering</span>
-                    <span class="px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-sm font-mono text-neutral-300">PostgreSQL</span>
-                </div>
-            </section>
+        <!-- CAJA 6: Lado Personal (Pequeña) -->
+        <div class="md:col-span-3 lg:col-span-4 bg-[#121212] border border-[#222] rounded-3xl p-6 flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
+            <p class="text-slate-400 text-sm">
+                Cuando no codeo, estoy haciendo <b>cartomagia</b> 🔮, juegos de mesa 🎲, en <b>patines</b> 🛼 o atrapando a <b>Gengar</b> 👻.
+            </p>
+            <a href="https://www.getonbrd.com/p/jordi-lesther-contreras" target="_blank" class="px-6 py-2 bg-[#1a1a1a] hover:bg-[#222] border border-[#333] rounded-full text-sm font-medium text-emerald-400 transition whitespace-nowrap">
+                Perfil GetOnBoard
+            </a>
+        </div>
 
-            <!-- Sección Casos de Estudio -->
-            <section>
-                <h3 class="text-xs font-mono text-fuchsia-400 uppercase tracking-widest mb-6">03. Casos de Estudio (GitHub)</h3>
-                <div class="flex flex-col gap-6">
-                    
-                    <!-- Proyecto 1 -->
-                    <a href="https://github.com/JordiLestherdev" target="_blank" class="group block p-6 bg-neutral-900/50 hover:bg-neutral-900 border border-neutral-800 hover:border-fuchsia-500/50 rounded-xl transition duration-300">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-lg font-bold text-white group-hover:text-fuchsia-400 transition">ai-cognitive-agents-prompts</h4>
-                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-fuchsia-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </div>
-                        <p class="text-sm text-neutral-400 mb-4">Patrones de ingeniería de prompts, manejo de contexto y guardrails para agentes de IA en producción, incluyendo cualificación de leads y soporte E-commerce.</p>
-                        <div class="flex gap-3 text-xs font-mono text-neutral-500">
-                            <span>#LLM</span>
-                            <span>#JSON-Output</span>
-                            <span>#RAG</span>
-                        </div>
-                    </a>
-
-                    <!-- Proyecto 2 -->
-                    <a href="https://github.com/JordiLestherdev" target="_blank" class="group block p-6 bg-neutral-900/50 hover:bg-neutral-900 border border-neutral-800 hover:border-fuchsia-500/50 rounded-xl transition duration-300">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-lg font-bold text-white group-hover:text-fuchsia-400 transition">n8n-human-in-the-loop</h4>
-                            <svg class="w-5 h-5 text-neutral-500 group-hover:text-fuchsia-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </div>
-                        <p class="text-sm text-neutral-400 mb-4">Arquitectura de orquestación visual y automatización de transiciones seguras entre agentes de IA y operadores humanos mediante WhatsApp.</p>
-                        <div class="flex gap-3 text-xs font-mono text-neutral-500">
-                            <span>#n8n</span>
-                            <span>#Automation</span>
-                            <span>#Webhooks</span>
-                        </div>
-                    </a>
-
-                </div>
-            </section>
-
-        </main>
-    </div>
+    </main>
 
 </body>
 </html>
